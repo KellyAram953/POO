@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.cathive.fonts.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="673.0" style="-fx-background-color: #002847;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controller.InicioController">
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="69.0" prefWidth="673.0" spacing="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevoHotel" stylesheets="@../css/application.css" text="Nuevo" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView textFill="#f2efef">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modificarHotel" stylesheets="@../css/application.css" text="Modificar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView textFill="#f2efef">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="104.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminarHotel" stylesheets="@../css/application.css" text="Eliminar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView textFill="#f2efef">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalir" layoutX="198.0" layoutY="10.0" mnemonicParsing="false" onAction="#salir" stylesheets="@../css/application.css" text="Salir" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView textFill="#f2efef">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <ImageView fitHeight="90.0" fitWidth="478.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../recursos/R.png" />
+         </image>
+      </ImageView>
+   </top>
+   <center>
+      <TableView fx:id="tblTabla" prefHeight="318.0" prefWidth="673.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmNombre" prefWidth="112.0" text="Nombre" />
+          <TableColumn fx:id="clmDireccion" prefWidth="179.0" text="Direccion" />
+            <TableColumn fx:id="clmCorreo" prefWidth="173.0" text="Correo" />
+            <TableColumn fx:id="clmTelefono" prefWidth="97.0" text="Telefono" />
+            <TableColumn fx:id="clmGerente" prefWidth="111.0" text="Gerente" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
